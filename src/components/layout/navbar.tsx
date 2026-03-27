@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { NavigationMenuBar } from "../common/navigation-menu";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(true);
@@ -38,12 +40,25 @@ const Navbar = () => {
       ${visible ? "translate-y-0" : "-translate-y-full"}`}
     >
       {/* Logo */}
-      <div
+      {/* <div
         className="font-bold text-lg cursor-pointer text-black"
         onClick={() => router.push("/")}
       >
         AVAN PARK
-      </div>
+      </div> */}
+      <Link href="/">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="flex items-center gap-2"
+        >
+          {/* <BookOpen className="h-8 w-8 text-primary" /> */}
+          <span className="text-2xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">
+            AVAN PARK
+          </span>
+        </motion.div>
+      </Link>
 
       {/* Navigation */}
       <div className="rounded-xl backdrop-blur-lg bg-white/40 p-1 flex items-center">
