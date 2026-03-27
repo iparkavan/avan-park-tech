@@ -17,7 +17,7 @@ const OurService = () => {
         marginRight: margin,
         borderRadius: radius,
       }}
-      className="h-screen bg-black"
+      className="bg-black rounded-t-3xl min-h-screen"
     ></motion.div>
   );
 };
