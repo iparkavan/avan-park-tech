@@ -1,9 +1,13 @@
+import Hero from "@/components/sections/hero";
+import OurService from "@/components/sections/our-service";
+
 export default function Home() {
   return (
-    <div className="[&>p]:px-1 [&>p]:bg-red-600 [&>p]:text-white [&>p]:mt-4">
-      {/* <p>one</p>
-      <p>Two</p>
-      <p>Three</p> */}
+    <div className="absolute w-full">
+      <Hero />
+      <div className="-mt-52 relative">
+        <OurService />
+      </div>
     </div>
   );
 }
