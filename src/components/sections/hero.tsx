@@ -38,6 +38,7 @@ export default function Hero() {
         <source src="/videos/puzzle.mp4" type="video/mp4" />
       </motion.video>
 
+      {/* <div className="absolute inset-0 bg-linear-to-b from-black/70 to-black/30" /> */}
       {/* Gradient */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_60%,white_100%)]" />
 
@@ -53,15 +54,15 @@ export default function Hero() {
           className="text-[clamp(2.5rem,6vw,6rem)] font-display font-semibold tracking-tighter leading-[0.85]"
         >
           <span className="block">We build</span>
-          <span className="block text-[#043927] mt-2">digital</span>
-          <span className="block mt-2 text-[#d38f50]">experiences</span>
+          <span className="block text-primary mt-2">digital</span>
+          <span className="block mt-2">experiences</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
-          className="mt-8 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed"
+          className="mt-8 text-lg md:text-xl text-primary font-semibold max-w-xl mx-auto leading-relaxed"
         >
           Websites & web apps that don't just work — they{" "}
           <span className="text-foreground font-medium">captivate</span>,{" "}
