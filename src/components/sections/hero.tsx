@@ -1,6 +1,8 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Button } from "../ui/button";
+import { ArrowRight, Play } from "lucide-react";
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -67,7 +69,7 @@ export default function Hero() {
           <span className="text-foreground font-medium">scale</span>.
         </motion.p>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.8 }}
@@ -86,6 +88,22 @@ export default function Hero() {
           >
             Explore services →
           </a>
+        </motion.div> */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.8 }}
+          className="flex flex-col mt-4 sm:flex-row gap-4 justify-center items-center"
+        >
+          <Button size="lg" className="group">
+            <ArrowRight className="size-4 rounded-full transition-transform group-hover:-rotate-45" />
+            Start a project
+          </Button>
+          <Button size="lg" variant="outline" className="group">
+            {/* <Play className="mr-2 h-4 w-4" /> */}
+            Explore services
+            <ArrowRight className="size-4 rounded-full transition-transform group-hover:translate-x-1" />
+          </Button>
         </motion.div>
       </motion.div>
     </section>

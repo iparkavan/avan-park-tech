@@ -57,7 +57,7 @@ export function NavigationMenuBar() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
           </NavigationMenuLink>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/about">About</Link>
