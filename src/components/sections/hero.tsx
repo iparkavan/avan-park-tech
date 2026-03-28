@@ -41,7 +41,7 @@ export default function Hero() {
       {/* <div className="absolute inset-0 bg-linear-to-b from-black/70 to-black/30" /> */}
       {/* Gradient */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_60%,white_100%)]" />
-
+      {/* <div className="absolute inset-0 bg-linear-to-b from-transparent via-white/20 to-primary" /> */}
       {/* TEXT (Parallax + goes under) */}
       <motion.div
         style={{ y: yText, scale: scaleText }}
