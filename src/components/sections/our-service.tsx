@@ -46,27 +46,27 @@ const OurService = () => {
   });
 
   // smoother margin for mobile
-  const margin = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [60, 0, 0, 60],
-  );
+  // const margin = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.3, 0.7, 1],
+  //   [60, 0, 0, 60],
+  // );
 
-  const radius = useTransform(scrollY, [0, 300], [20, 24]);
+  // const radius = useTransform(scrollY, [0, 300], [20, 24]);
 
-  // // reduce animation intensity on mobile
+  // // // reduce animation intensity on mobile
   const yText = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const scaleText = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
 
   return (
     <motion.div
       ref={ref}
-      style={{
-        marginLeft: margin,
-        marginRight: margin,
-        borderRadius: radius,
-      }}
-      className="bg-primary rounded-t-3xl min-h-screen"
+      // style={{
+      //   marginLeft: margin,
+      //   marginRight: margin,
+      //   borderRadius: radius,
+      // }}
+      className="bg-primary rounded-t-3xl mx-12 min-h-screen"
     >
       <div className="px-12 container mx-auto">
         {/* Heading */}
