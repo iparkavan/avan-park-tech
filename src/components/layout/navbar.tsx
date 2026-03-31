@@ -40,12 +40,6 @@ const Navbar = () => {
       ${visible ? "translate-y-0" : "-translate-y-full"}`}
     >
       {/* Logo */}
-      {/* <div
-        className="font-bold text-lg cursor-pointer text-black"
-        onClick={() => router.push("/")}
-      >
-        AVAN PARK
-      </div> */}
       <Link href="/">
         <motion.div
           initial={{ opacity: 0 }}
@@ -59,12 +53,14 @@ const Navbar = () => {
       </Link>
 
       {/* Navigation */}
-      <div className="rounded-xl backdrop-blur-lg bg-white/40 p-1 flex items-center">
+      <div className="rounded-xl hidden backdrop-blur-lg bg-white/40 p-1 md:flex items-center">
         <NavigationMenuBar />
       </div>
 
       {/* Button */}
-      <Button>Connect</Button>
+      <div className="hidden lg:block">
+        <Button>Connect</Button>
+      </div>
     </div>
   );
 };
