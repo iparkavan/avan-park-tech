@@ -10,7 +10,7 @@ export default function Home() {
         <OurService />
       </div>
 
-      <div className="relative z-20 -mt-[10vh]">
+      <div className="relative z-20 md:-mt-[10vh]">
         <Overview />
       </div>
     </div>

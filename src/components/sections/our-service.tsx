@@ -61,12 +61,13 @@ const OurService = () => {
   return (
     <motion.div
       ref={ref}
+      style={{ y: yText, scale: scaleText }}
       // style={{
       //   marginLeft: margin,
       //   marginRight: margin,
       //   borderRadius: radius,
       // }}
-      className="bg-primary rounded-t-3xl mx-12 min-h-screen"
+      className="bg-primary rounded-3xl md:mx-12 p-6 min-h-375 md:min-h-300 lg:min-h-screen"
     >
       <div className="px-12 container mx-auto">
         {/* Heading */}
@@ -82,7 +83,7 @@ const OurService = () => {
 
         <motion.section
           className="w-full mt-8 sm:mt-12"
-          style={{ y: yText, scale: scaleText }}
+          // style={{ y: yText, scale: scaleText }}
         >
           {/* Top Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
