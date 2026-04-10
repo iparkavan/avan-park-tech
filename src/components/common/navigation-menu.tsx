@@ -12,6 +12,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import TransitionLink from "./page-transition/transition-link";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -57,13 +58,13 @@ export function NavigationMenuBar() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/">Home</Link>
+            <TransitionLink href="/">Home</TransitionLink>
           </NavigationMenuLink>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/about">About</Link>
+            <TransitionLink href="/about">About</TransitionLink>
           </NavigationMenuLink>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/service">Service</Link>
+            <TransitionLink href="/service">Service</TransitionLink>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

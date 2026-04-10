@@ -8,6 +8,9 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
+import AnimationProvider from "@/components/common/page-transition/animation-provider";
+import PageTransition from "@/components/common/page-transition/page-transition";
+import PageTransitionProvider from "@/components/common/page-transition/page-transition";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -51,8 +54,10 @@ export default function RootLayout({
       className={`${inter.variable} ${indie.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
+        <PageTransitionProvider>
+          <Navbar />
+          {children}
+        </PageTransitionProvider>
       </body>
     </html>
   );

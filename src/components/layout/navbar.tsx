@@ -6,9 +6,12 @@ import { Button } from "../ui/button";
 import { NavigationMenuBar } from "../common/navigation-menu";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import TransitionLink from "../common/page-transition/transition-link";
+import { usePageTransition } from "../common/page-transition/page-transition";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(true);
+  const { navigateTo } = usePageTransition();
   const prevScroll = useRef(0);
 
   const router = useRouter();
@@ -40,7 +43,7 @@ const Navbar = () => {
       ${visible ? "translate-y-0" : "-translate-y-full"}`}
     >
       {/* Logo */}
-      <Link href="/">
+      <TransitionLink href="/">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -50,7 +53,7 @@ const Navbar = () => {
           {/* <BookOpen className="h-8 w-8 text-primary" /> */}
           <span className="text-2xl font-bold text-primary">AVAN PARK</span>
         </motion.div>
-      </Link>
+      </TransitionLink>
 
       {/* Navigation */}
       <div className="rounded-xl hidden backdrop-blur-lg bg-white/40 p-1 md:flex items-center">
@@ -59,7 +62,7 @@ const Navbar = () => {
 
       {/* Button */}
       <div className="hidden lg:block">
-        <Button>Connect</Button>
+        <Button onClick={() => navigateTo("/connect")}>Connect</Button>
       </div>
     </div>
   );

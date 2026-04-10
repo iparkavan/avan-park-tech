@@ -3,9 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { usePageTransition } from "../common/page-transition/page-transition";
 
 export default function Hero() {
   const { scrollY } = useScroll();
+  const { navigateTo, isTransitioning } = usePageTransition();
 
   // Parallax layers
   const yBg = useTransform(scrollY, [0, 500], [0, 250]); // slower but noticeable
@@ -53,7 +55,6 @@ export default function Hero() {
           <span className="block text-primary mt-2">digital</span>
           <span className="block mt-2">experiences</span>
         </motion.h1>
-
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,7 +66,6 @@ export default function Hero() {
           <span className="text-foreground font-medium">convert</span>, and{" "}
           <span className="text-foreground font-medium">scale</span>.
         </motion.p>
-
         {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -102,6 +102,9 @@ export default function Hero() {
             <ArrowRight className="size-4 rounded-full transition-transform group-hover:translate-x-1" />
           </Button>
         </motion.div>
+        <Button onClick={() => navigateTo("/about")}>
+          Test — transitioning: {String(isTransitioning)}
+        </Button>
       </motion.div>
     </section>
   );
