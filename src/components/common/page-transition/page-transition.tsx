@@ -32,7 +32,7 @@ export const usePageTransition = () => useContext(TransitionContext);
 
 const COLS = 8;
 const ROWS = 6;
-const TILE_COLOR = "#0f0f0f";
+const TILE_COLOR = "#4c5c39";
 const TILE_IN_DUR = 280;
 const TILE_OUT_DUR = 240;
 const MAX_STAGGER_IN = 320;
