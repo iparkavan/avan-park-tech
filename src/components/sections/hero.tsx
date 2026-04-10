@@ -102,7 +102,6 @@ export default function Hero() {
             className="group"
             onClick={() => navigateTo("/service")}
           >
-            {/* <Play className="mr-2 h-4 w-4" /> */}
             Explore services
             <ArrowRight className="size-4 rounded-full transition-transform group-hover:translate-x-1" />
           </Button>
